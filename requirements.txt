@@ -1,0 +1,25 @@
+# Core dependencies
+streamlit>=1.28.0
+pandas>=1.5.0
+numpy>=1.24.0
+
+# Trading and technical analysis
+ta>=0.10.2
+python-binance>=1.0.16
+
+# Charting
+lightweight-charts>=1.0.0
+plotly>=5.15.0
+
+# PDF generation and file handling
+fpdf2>=2.7.0
+openpyxl>=3.1.0
+
+# Utilities
+requests>=2.31.0
+python-dotenv>=1.0.0
+
+# Optional: For alerts
+# telegram-bot-api
+# smtplib (built-in)
+
