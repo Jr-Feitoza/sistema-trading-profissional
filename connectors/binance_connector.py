@@ -1,5 +1,6 @@
 from binance.client import Client
 import pandas as pd
+import random
 
 class BinanceConnector:
     def __init__(self, api_key=None, api_secret=None):
@@ -39,20 +40,16 @@ class BinanceConnector:
 
     def place_order(self, symbol, side, type, quantity, price=None):
         # Simula a colocação de uma ordem
-        print(f\"Simulando ordem: {side} {quantity} {symbol} a {price}\")
+        print(f"Simulando ordem: {side} {quantity} {symbol} a {price}")
         # Em um ambiente real, você usaria self.client.create_order
-        return {\"orderId\": \"simulated_order_123\", \"status\": \"FILLED\"}
+        return {"orderId": "simulated_order_123", "status": "FILLED"}
 
     def get_account_balance(self):
         # Simula o saldo da conta
-        print(\"Simulando saldo da conta\")
-        return {\"USDT\": 10000, \"BTC\": 0.5}
+        print("Simulando saldo da conta")
+        return {"USDT": 10000, "BTC": 0.5}
 
     def get_current_price(self, symbol): 
         # Simula o preço atual
-        print(f\"Simulando preço atual para {symbol}\")
+        print(f"Simulando preço atual para {symbol}")
         return random.uniform(30000, 35000)
-
-import random
-
-
