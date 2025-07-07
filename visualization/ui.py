@@ -80,7 +80,7 @@ with st.sidebar:
     if col_carregar.button("🔁 Carregar Perfil") and perfil_selecionado and perfil_selecionado != "Nenhum":
         perfil = carregar_perfil(perfil_selecionado)
         if perfil:
-            st.experimental_rerun()
+            st.rerun()
 
     executar = st.button("🚀 Executar Backtest")
 
