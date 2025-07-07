@@ -19,7 +19,11 @@ class BinanceConnector:
 
         # Simula o carregamento de dados históricos para backtest
         # Em um ambiente real, você usaria a API da Binance
-        print(f\"Simulando carregamento de dados históricos para {symbol} - {interval}\")
+        print(
+            f"Simulando carregamento de dados históricos para {symbol} - "
+            f"intervalo: {interval}"
+        )
+
         # Gerar dados de exemplo
         dates = pd.date_range(start=start_str, periods=100, freq=interval)
         data = {
