@@ -9,7 +9,14 @@ class BinanceConnector:
         else:
             self.client = None # Modo backtest ou simulação
 
-    def load_historical_data(self, symbol=\"BTCUSDT\", interval=\"1h\", start_str=\"1 Jan, 2023\", end_str=None):
+    def load_historical_data(
+        self, 
+        symbol="BTCUSDT", 
+        interval="1h", 
+        start_time=None, 
+        end_time=None
+    ):
+
         # Simula o carregamento de dados históricos para backtest
         # Em um ambiente real, você usaria a API da Binance
         print(f\"Simulando carregamento de dados históricos para {symbol} - {interval}\")
