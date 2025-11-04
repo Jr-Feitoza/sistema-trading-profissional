@@ -1,0 +1,42 @@
+tasks:
+  - name: Setup
+    init: |
+      pip install -r requirements.txt
+    command: |
+      clear
+      echo "╔══════════════════════════════════════════════════════════════╗"
+      echo "║        🚀 Sistema Trading Profissional                      ║"
+      echo "║                                                              ║"
+      echo "║  Sistema completo de trading com AI agents, backtesting     ║"
+      echo "║  e position sizing automático                                ║"
+      echo "╚══════════════════════════════════════════════════════════════╝"
+      echo ""
+      echo "📚 Exemplos disponíveis:"
+      echo "  1. python examples/position_size_calculator_examples.py"
+      echo "  2. python compare_stop_strategies.py"
+      echo "  3. python run_historical_backtest.py"
+      echo "  4. streamlit run web_demo.py"
+      echo ""
+      echo "📖 Documentação:"
+      echo "  - docs/LEVERAGE_CALCULATION_GUIDE.md"
+      echo "  - docs/HYPERLIQUID_LEVERAGE_SYSTEM.md"
+      echo "  - docs/COMO_TESTAR_ONLINE.md"
+      echo ""
+      echo "🔧 Componentes principais:"
+      echo "  - Position Size Calculator (risk_management/)"
+      echo "  - Enhanced Backtest Runner (backtest/)"
+      echo "  - HyperLiquid Connector (connectors/)"
+      echo "  - SMC & Wyckoff Strategies (strategies/)"
+      echo "  - AI Agents System (agents/)"
+      echo ""
+
+vscode:
+  extensions:
+    - ms-python.python
+    - ms-python.vscode-pylance
+    - ms-python.black-formatter
+
+ports:
+  - port: 8501
+    onOpen: open-preview
+    description: Streamlit App
