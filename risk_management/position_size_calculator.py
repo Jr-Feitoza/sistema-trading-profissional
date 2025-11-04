@@ -453,12 +453,12 @@ class PositionSizeCalculator:
             result.is_valid = False
 
         # Check 3: Stop loss muito próximo de liquidação
-        if result.liquidation_price and params.leverage > 1:
+        if result.liquidation_price and params.leverage > 1 and result.stop_loss_price:
             if params.side == PositionSide.LONG:
-                distance_to_liq = ((params.stop_loss_price - result.liquidation_price)
+                distance_to_liq = ((result.stop_loss_price - result.liquidation_price)
                                  / result.liquidation_price * 100)
             else:
-                distance_to_liq = ((result.liquidation_price - params.stop_loss_price)
+                distance_to_liq = ((result.liquidation_price - result.stop_loss_price)
                                  / result.liquidation_price * 100)
 
             if distance_to_liq < 10:  # Menos de 10% de margem
